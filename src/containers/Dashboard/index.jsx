@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { AppContext } from '@edx/frontend-platform/react';
 import { reduxHooks } from 'hooks';
 import { RequestKeys } from 'data/constants/requests';
 import EnterpriseDashboardModal from 'containers/EnterpriseDashboardModal';
@@ -15,23 +16,29 @@ import hooks from './hooks';
 import './index.scss';
 
 export const Dashboard = () => {
+  const { authenticatedUser } = React.useContext(AppContext);
   hooks.useInitializeDashboard();
   const { pageTitle } = hooks.useDashboardMessages();
   const hasCourses = reduxHooks.useHasCourses();
   const hasAvailableDashboards = reduxHooks.useHasAvailableDashboards();
   const initIsPending = reduxHooks.useRequestIsPending(RequestKeys.initialize);
   const showSelectSessionModal = reduxHooks.useShowSelectSessionModal();
+  let script = document.createElement('script');
+  script.innerHTML = (id => 
+    "Dashboard(['tree', 'ball', 'list'], {version: '1.2', domain: 'olive.hanlunls.com', userID: "+id+", where: '#dashboard-container'});"
+  )(authenticatedUser.userId);
+  document.body.append(script);
 
   return (
     <div id="dashboard-container" className="d-flex flex-column p-2 pt-0">
-      <h1 className="sr-only">{pageTitle}</h1>
+      <h1 className="sr-only" hidden>{pageTitle}</h1>
       {!initIsPending && (
         <>
           {hasAvailableDashboards && <EnterpriseDashboardModal />}
           {(hasCourses && showSelectSessionModal) && <SelectSessionModal />}
         </>
       )}
-      <div id="dashboard-content">
+      <div id="dashboard-content" hidden>
         {initIsPending
           ? (<LoadingView />)
           : (
