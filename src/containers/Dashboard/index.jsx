@@ -24,7 +24,9 @@ export const Dashboard = () => {
   const initIsPending = reduxHooks.useRequestIsPending(RequestKeys.initialize);
   const showSelectSessionModal = reduxHooks.useShowSelectSessionModal();
   let script = document.createElement('script');
-  script.innerHTML = ((token, id) => "const csrf_token="+token+";Dashboard("+id+", {version: '1.2', where: '#dashboard-container'});")(csrf_token, authenticatedUser.userId);
+  script.innerHTML = (id => 
+    "Dashboard(['tree', 'ball', 'list'], {version: '1.2', domain: 'olive.hanlunls.com', userID: "+id+", where: '#dashboard-container'});"
+  )(authenticatedUser.userId);
   document.body.append(script);
 
   return (
