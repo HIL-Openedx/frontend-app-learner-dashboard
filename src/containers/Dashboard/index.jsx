@@ -25,7 +25,7 @@ export const Dashboard = () => {
   const showSelectSessionModal = reduxHooks.useShowSelectSessionModal();
   let script = document.createElement('script');
   script.innerHTML = (id => 
-    "Dashboard("+id+"{version: '1.2', domain: 'quince.hanlunls.com', where: '#dashboard-container'});"
+    "Dashboard("+id+",{version: '1.2', domain: 'quince.hanlunls.com', where: '#dashboard-container'});"
   )(authenticatedUser.userId);
   document.body.append(script);
 
