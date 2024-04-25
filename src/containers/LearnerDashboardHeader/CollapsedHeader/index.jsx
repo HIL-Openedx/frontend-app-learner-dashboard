@@ -34,7 +34,9 @@ export const CollapsedHeader = () => {
             variant="primary"
             className="p-4"
           />
-          <BrandLogo />
+          <a href="https://hanlunls.com">
+            <img src="https://hanlunls.com/images/logo-02.png"/>
+          </a>
         </header>
         <CollapseMenuBody isOpen={isOpen} />
       </>

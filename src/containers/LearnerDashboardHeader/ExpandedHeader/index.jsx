@@ -24,46 +24,9 @@ export const ExpandedHeader = () => {
   return (
     !isCollapsed && (
     <header className="d-flex shadow-sm align-items-center learner-variant-header pl-4">
-      <div className="flex-grow-1 d-flex align-items-center">
-        <BrandLogo />
-
-        <Button
-          as="a"
-          href="/"
-          variant="inverse-primary"
-          className="p-4 course-link"
-        >
-          {formatMessage(messages.course)}
-        </Button>
-        <Button
-          as="a"
-          href={urls.programsUrl()}
-          variant="inverse-primary"
-          className="p-4"
-        >
-          {formatMessage(messages.program)}
-        </Button>
-        <Button
-          as="a"
-          href={urls.baseAppUrl(courseSearchUrl)}
-          variant="inverse-primary"
-          className="p-4"
-          onClick={exploreCoursesClick}
-        >
-          {formatMessage(messages.discoverNew)}
-        </Button>
-        <WidgetNavbar placement={EXPANDED_NAVBAR} />
-        <span className="flex-grow-1" />
-        <Button
-          as="a"
-          href={getConfig().SUPPORT_URL}
-          variant="inverse-primary"
-          className="p-4"
-        >
-          {formatMessage(messages.help)}
-        </Button>
-      </div>
-
+      <a href="https://hanlunls.com">
+        <img src="https://hanlunls.com/images/logo-02.png"/>
+      </a>
       <AuthenticatedUserDropdown />
     </header>
     )
