@@ -5,8 +5,9 @@
 }
 
 .learner-variant-header {
-  &.pl4 {
+  &.pl-4 {
     justify-content: space-between;
+    padding:0;
   }
   background: url('https://hanlunls.com/images/bg_header200.jpg');
   padding:1em 0;
