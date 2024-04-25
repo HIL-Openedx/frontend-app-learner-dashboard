@@ -5,9 +5,17 @@
 }
 
 .learner-variant-header {
+  &.pl4 {
+    justify-content: space-between;
+  }
+  background: url('https://hanlunls.com/images/bg_header200.jpg');
+  padding:1em 0;
   a {
     // needed to make the link not resize the header
     border-bottom: 2px solid transparent;
+    img {
+      width:60%;
+    }
   }
   .course-link {
     border-bottom: 2px solid !important;
@@ -15,6 +23,9 @@
 
   .course-link:hover {
     border-bottom: inherit !important;
+  }
+  .btn {
+    border-radius:0;
   }
 }
 
