@@ -19,7 +19,7 @@ export const CollapsedHeader = () => {
   return (
     isCollapsed && (
       <>
-        <header className="d-flex shadow-sm align-items-center learner-variant-header">
+        <header className="shadow-sm align-items-center learner-variant-header">
           <IconButton
             invertColors
             isActive

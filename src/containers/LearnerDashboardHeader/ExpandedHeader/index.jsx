@@ -23,7 +23,7 @@ export const ExpandedHeader = () => {
 
   return (
     !isCollapsed && (
-    <header className="d-flex shadow-sm align-items-center learner-variant-header pl-4">
+    <header className="shadow-sm align-items-center learner-variant-header pl-4">
       <a href="https://hanlunls.com">
         <img src="https://hanlunls.com/images/logo-02.png"/>
       </a>

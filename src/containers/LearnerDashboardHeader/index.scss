@@ -5,18 +5,26 @@
 }
 
 .learner-variant-header {
+  display:grid; grid-template-columns:1fr auto 1fr;
   &.pl-4 {
-    justify-content: space-between;
-    padding:0;
+    padding:0 !important;
   }
   background: url('https://hanlunls.com/images/bg_header200.jpg');
   padding:1em 0;
+
+  &.pl-4 a {
+    grid-column:2;
+  }
   a {
     // needed to make the link not resize the header
     border-bottom: 2px solid transparent;
+    text-align:center;
     img {
       width:60%;
     }
+  }
+  .btn-icon {
+    margin-right:auto;
   }
   .course-link {
     border-bottom: 2px solid !important;
