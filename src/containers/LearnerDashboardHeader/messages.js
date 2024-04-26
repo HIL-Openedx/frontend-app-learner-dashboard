@@ -43,7 +43,7 @@ const messages = defineMessages({
   },
   signOut: {
     id: 'learnerVariantDashboard.menu.signOut.label',
-    defaultMessage: 'Sign Out',
+    defaultMessage: '登出',
     description: 'The label for the user menu Sign Out action.',
   },
   course: {
