@@ -29,6 +29,7 @@ export const CollapseMenuBody = ({ isOpen }) => {
         {authenticatedUser && (
           <>
             <Button
+              data-test={authenticatedUser.is_staff}
               as="a"
               href={getConfig().LOGOUT_URL}
               variant="inverse-primary"
