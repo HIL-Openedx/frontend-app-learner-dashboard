@@ -26,10 +26,20 @@ export const CollapseMenuBody = ({ isOpen }) => {
   return (
     isOpen && (
       <div className="d-flex flex-column shadow-sm nav-small-menu">
+        {authenticatedUser.is_staff && (
+          <>
+            <Button
+              as="a"
+              href="https://quince.hanlunls.com:2223/"
+              variant="inverse-primary"
+            >
+              儀表板
+            </Button>
+          </>
+        )}
         {authenticatedUser && (
           <>
             <Button
-              data-test={authenticatedUser.is_staff}
               as="a"
               href={getConfig().LOGOUT_URL}
               variant="inverse-primary"
