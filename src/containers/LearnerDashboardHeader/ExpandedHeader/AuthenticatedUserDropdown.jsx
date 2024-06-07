@@ -53,7 +53,7 @@ export const AuthenticatedUserDropdown = () => {
               </Badge>
             </Dropdown.Item>
           )}
-          {authenticatedUser.isStaff && (
+          {authenticatedUser.administrator && (
             <Dropdown.Item href='https://quince.hanlunls.com:2223/'>
               儀表板
             </Dropdown.Item>
