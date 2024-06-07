@@ -27,6 +27,7 @@ export const AuthenticatedUserDropdown = () => {
           <span data-hj-suppress className="d-md-inline">
             {authenticatedUser.username}
           </span>
+          <span hidden>{JSON.stringify(authenticatedUser)}</span>
         </Dropdown.Toggle>
         <Dropdown.Menu className="dropdown-menu-right">
           { getConfig().ENABLE_EDX_PERSONAL_DASHBOARD && (
