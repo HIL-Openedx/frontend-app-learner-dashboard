@@ -26,7 +26,7 @@ export const CollapseMenuBody = ({ isOpen }) => {
   return (
     isOpen && (
       <div className="d-flex flex-column shadow-sm nav-small-menu">
-        {authenticatedUser.is_staff && (
+        {authenticatedUser.isStaff && (
           <>
             <Button
               as="a"
