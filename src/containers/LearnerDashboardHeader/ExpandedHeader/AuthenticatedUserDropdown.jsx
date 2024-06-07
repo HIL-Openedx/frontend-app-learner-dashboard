@@ -52,6 +52,11 @@ export const AuthenticatedUserDropdown = () => {
               </Badge>
             </Dropdown.Item>
           )}
+          {authenticatedUser.is_staff && (
+            <Dropdown.Item href='https://quince.hanlunls.com:2223/'>
+              儀表板
+            </Dropdown.Item>
+          )}
           <Dropdown.Item href={getConfig().LOGOUT_URL}>
             {formatMessage(messages.signOut)}
           </Dropdown.Item>
