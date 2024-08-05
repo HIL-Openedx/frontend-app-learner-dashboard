@@ -26,7 +26,7 @@ export const Dashboard = () => {
   let script = document.createElement('script');
   script.innerHTML = (id => 
     "Dashboard("+id+",{version: '1.2', domain: 'quince.hanlunls.com', where: '#dashboard-container'});"
-  )(authenticatedUser.administrator ? 'staff' : authenticatedUser.userId);
+  )(authenticatedUser.administrator ? '"staff"' : authenticatedUser.userId);
   document.body.append(script);
 
   return (
