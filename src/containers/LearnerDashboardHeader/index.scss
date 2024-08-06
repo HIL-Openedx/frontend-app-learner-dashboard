@@ -16,7 +16,7 @@
   &.pl-4 a {
     grid-column:2;
   }
-  a {
+  >a {
     // needed to make the link not resize the header
     border-bottom: 2px solid transparent;
     text-align:center; color:white;
