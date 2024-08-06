@@ -24,9 +24,7 @@ export const ExpandedHeader = () => {
   return (
     !isCollapsed && (
     <header className="shadow-sm align-items-center learner-variant-header pl-4">
-      <a href="https://hanlunls.com">
-        <img src="https://hanlunls.com/images/logo-02.png"/>
-      </a>
+      <a href="https://hanlunls.com">興倫電子學習系統</a>
       <AuthenticatedUserDropdown />
     </header>
     )
