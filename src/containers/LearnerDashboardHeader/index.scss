@@ -19,7 +19,8 @@
   a {
     // needed to make the link not resize the header
     border-bottom: 2px solid transparent;
-    text-align:center;
+    text-align:center; color:white;
+    font-size:2em; font-weight:bold;
     img {
       width:60%;
     }
