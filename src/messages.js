@@ -14,7 +14,7 @@ export const messages = StrictDict({
   pageTitle: {
     id: 'learner-dash.title',
     description: 'Page title: Learner Home',
-    defaultMessage: '興倫電子學習平台',
+    defaultMessage: '興倫電子學習系統',
   },
 });
 
